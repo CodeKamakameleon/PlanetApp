@@ -22,17 +22,14 @@ export function Planet() {
       .catch((err) => console.error(err));
   }, [planetName]);
 
-  // lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 sm:grid-rows-3
-  // sm:grid-rows-4
-
   return !planet ? null : (
     <div className="content">
       <div className="frame">
         <Image view={view} planet={planet} />
       </div>
-      <div>
-        <h1 className="name">{planetName}</h1>
-      </div>
+
+      <h1 className="name">{planetName}</h1>
+
       <div className="summary">
         <Text className="text" planet={planet} view={view} />
 

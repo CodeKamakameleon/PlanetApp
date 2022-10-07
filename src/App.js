@@ -7,7 +7,7 @@ import { Page } from "./Components/Page";
 
 export const App = () => {
   return (
-    <div>
+    <div className="app">
       <Page />
     </div>
   );

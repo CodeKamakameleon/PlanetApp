@@ -6,7 +6,7 @@ export const Buttons = ({ setView }) => {
     <div className="buttons">
       <button onClick={() => setView("overview")}>
         <span>01 </span>
-        <span> OVERVIEW</span>
+        OVERVIEW
       </button>
       <button onClick={() => setView("structure")}>
         <span>02 </span> INTERNAL STRUCTURE
