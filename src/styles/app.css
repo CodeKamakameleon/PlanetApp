@@ -1,0 +1,23 @@
+@import url("desktop.css");
+@import url("tablet.css");
+@import url("mobile.css");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;400&family=League+Spartan&display=swap");
+
+* {
+  background-color: black;
+  background-image: url("/src/assets/background-stars.svg");
+  font-family: "League Spartan";
+  text-transform: uppercase;
+}
+
+.app {
+  color: white;
+}
+
+button {
+  color: white;
+}
+
+.title {
+  color: lightgrey;
+}

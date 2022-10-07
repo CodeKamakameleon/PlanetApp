@@ -1,19 +1,24 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Planet } from "./Planet";
-import { Stats } from "./Stats";
 import { Navbar } from "./Navbar";
 
-export const Page = ({ planet }) => {
+export const Page = ({ planet, setPlanet, view, setView }) => {
   return (
-    <div className="bg-stars bg-black min-w-screen min-h-screen">
-      <Navbar />
+    <div className="planet">
+      <Navbar
+        planet={planet}
+        setPlanet={setPlanet}
+        view={view}
+        setView={setView}
+      />
 
-      <Planet />
-
-      <Routes>
-        <Route path="/" element={<Navigate to="mercury" />} />
-        <Route path="/:planetName" element={<Planet />} />
-      </Routes>
+      <Planet planet={planet} view={view} setView={setView} />
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<Navigate to="mercury" />} />
+          <Route path="/:planetName" element={<Planet />} />
+        </Routes>
+      </div>
     </div>
   );
 };

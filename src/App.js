@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 // import { Routes, Route, Navigate } from "react-router-dom";
-
+import "./styles/app.css";
 // import { Stats } from "./Components/Stats";
 // import { Planet } from "./Components/Planet";
 import { Page } from "./Components/Page";

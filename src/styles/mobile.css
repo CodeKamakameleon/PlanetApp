@@ -1,0 +1,190 @@
+@media screen and (max-width: 780px) {
+  * {
+    background-color: black;
+    background-image: url("../assets/background-stars.svg");
+    font-family: "League Spartan";
+    text-transform: uppercase;
+  }
+
+  .app {
+    color: white;
+  }
+  /* .mbl-title {
+      color: lightgray;
+    } */
+  .title {
+    /* display: none; */
+  }
+
+  button {
+    color: white;
+    border: none;
+  }
+
+  button:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .image {
+    display: flex;
+    border: solid 1px white;
+  }
+
+  .img {
+    width: 50%;
+  }
+
+  .navBar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px #d3d3d3 solid;
+    flex-direction: column;
+    z-index: 1001;
+    /* display: none; */
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    /* align-items: center;
+      display: flex;
+      text-align: center;
+      justify-content: right;
+      padding: 10px;
+      font-family: "Antonio"; */
+    /* display: none; */
+  }
+
+  .nav-links > a {
+    display: none;
+    padding: 8px;
+    color: #ffffffcf;
+    text-decoration: none;
+  }
+
+  .content {
+    margin: 5% 5% 5%;
+  }
+
+  .text {
+    font-family: "Antonio";
+    text-transform: none;
+  }
+
+  .buttons {
+    display: none;
+  }
+  span {
+    display: none;
+  }
+
+  .btn-mbl {
+    height: 10%;
+    display: flex;
+    border: none;
+    justify-content: center;
+  }
+
+  .btn-mbl > .buttons {
+    display: flex;
+    height: 3vh;
+  }
+
+  .frame > div {
+    display: flex;
+    justify-content: center;
+    /* width: 50%; */
+  }
+
+  .stats {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats > div {
+    /* position: relative;*/
+    display: flex;
+    border: solid 0.25px #ffffff75;
+    margin: 5px;
+    padding: 10px;
+    height: 3vh;
+    justify-content: space-between;
+    align-items: center;
+    /*flex-direction: column;
+      justify-content: left;
+      top: 100px;
+       */
+  }
+
+  .stat-name {
+    font-size: 10px;
+    margin: 0px;
+    color: #ffffff75;
+  }
+
+  .stat-num {
+    font-size: 20px;
+    font-family: "Antonio";
+  }
+
+  .img-surface {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    background: none;
+    height: 100px;
+  }
+
+  .img-planet {
+    position: relative;
+    background: none;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .name {
+    font-size: 50px;
+    font-weight: 300;
+    margin: 5px 0 2px 0;
+    z-index: 10000;
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* .mbl-top {
+      display: flex;
+      justify-content: space-between;
+    } */
+
+  .mbl-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    width: 30%;
+    background-color: #181818;
+    border-top: 2px lightgray;
+    z-index: 1000;
+  }
+
+  .mbl-nav > * {
+    padding-left: 20%;
+    color: white;
+    font-family: "Antonio";
+    text-decoration: none;
+  }
+
+  .mbl-nav > *:hover {
+    text-decoration: underline;
+    color: rgb(202, 5, 202);
+  }
+}
