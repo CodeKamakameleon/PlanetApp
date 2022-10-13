@@ -1,19 +1,18 @@
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
-import { Buttons } from "./Buttons";
-import { Image } from "./Image";
-import { Text } from "./Text";
-import { Stats } from "./Stats";
+import { useState, useEffect } from "react";
+import { Navbar } from "./Navbar.js";
+import { Content } from "./Content.js";
+import { Stats } from "./Stats.js";
 
-export function Planet() {
-  const [planet, setPlanet] = useState(null);
-  const [view, setView] = useState("overview");
+export const Planet = () => {
   const { planetName } = useParams();
+  const [planet, setPlanet] = useState([]);
+  const [view, setView] = useState("overview");
+
   useEffect(() => {
     fetch(`https://api.api-ninjas.com/v1/planets?name=${planetName}`, {
       headers: {
-        "X-Api-Key": "vHs8mXzb2bW0mRVntK4KQA==uCt3PCOhyHadhxrO",
+        "X-Api-Key": "tiqQtd5+jNWhIQJ672wvJw==pJtqcm61TJUGSkIj",
         "Content-Type": "application/json",
       },
     })
@@ -22,21 +21,16 @@ export function Planet() {
       .catch((err) => console.error(err));
   }, [planetName]);
 
-  return !planet ? null : (
-    <div className="content">
-      <div className="frame">
-        <Image view={view} planet={planet} />
-      </div>
-
-      <h1 className="name">{planetName}</h1>
-
-      <div className="summary">
-        <Text className="text" planet={planet} view={view} />
-
-        <Buttons setView={setView} />
-      </div>
-
+  return (
+    <div className="planet">
+      <Navbar
+        planet={planet}
+        setPlanet={setPlanet}
+        view={view}
+        setView={setView}
+      />
+      <Content planet={planet} view={view} setView={setView} />
       <Stats className="stat" planet={planet} />
     </div>
   );
-}
+};

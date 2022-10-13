@@ -75,11 +75,14 @@
     display: flex;
     line-height: 30px;
     margin: 20px 0 10px;
+    /* display: none; */
   }
 
   .text {
     font-family: "Antonio";
     text-transform: none;
+    padding-top: 8px;
+    padding-bottom: 10px;
   }
 
   .buttons {

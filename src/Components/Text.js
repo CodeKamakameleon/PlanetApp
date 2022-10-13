@@ -13,7 +13,7 @@ export const Text = ({ planet, view, planetName }) => {
 
   return (
     <div className="info">
-      <h1 className="name">{planetName}</h1>
+      <h1 className="name">{planet.name}</h1>
 
       <div className="text">{text}</div>
     </div>
